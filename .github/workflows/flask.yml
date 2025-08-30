@@ -31,5 +31,4 @@ jobs:
           pip install -r ../steps.txt
 
       - name: Test code
-
         run: python ./main_test.py
