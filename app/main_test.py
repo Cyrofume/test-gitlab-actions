@@ -12,6 +12,7 @@ class TestMain(unittest.TestCase):
         self.assertEqual(os.environ.get("MODE"), get_mode())
     def test_nothing(self):
         print("why")
+        print('does it not')
         pass
 
 if __name__ == "__main__":
