@@ -1,5 +1,5 @@
 What do I need for this project to run
-
+Note this file is different from requirements.txt as that is used for the workflow
 Pip installed? (Easy)
     Add pip into your env (Med)
 

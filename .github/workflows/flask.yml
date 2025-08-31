@@ -28,8 +28,7 @@ jobs:
 
         run: |
           python -m pip install --upgrade pip
-          pip install -r ../steps.txt
+          pip install -r ../requirements.txt
 
-      - name: Test code
-
+      - name: Test Code
         run: python ./main_test.py

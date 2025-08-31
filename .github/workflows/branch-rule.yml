@@ -1,0 +1,19 @@
+name: Enforce Branch Rules
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  enforce-rules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Block if PR title doesn't match convention
+        run: |
+          if [[ ! "${{ github.event.pull_request.title }}" =~ ^(feat|fix|chore|docs)/ ]]; then
+            echo "PR title does not match required format"
+            exit 1
+          fi
